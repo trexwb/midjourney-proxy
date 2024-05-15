@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.annotation.Resource;
 
 @Configuration
+@CrossOrigin(origins = "*") // 允许所有源
 public class WebMvcConfig implements WebMvcConfigurer {
 	@Resource
 	private ApiAuthorizeInterceptor apiAuthorizeInterceptor;

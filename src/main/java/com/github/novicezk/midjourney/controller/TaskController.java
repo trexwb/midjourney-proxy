@@ -27,6 +27,7 @@ import java.util.Set;
 
 @Api(tags = "任务查询")
 @RestController
+@CrossOrigin(origins = "*") // 允许所有源
 @RequestMapping("/task")
 @RequiredArgsConstructor
 public class TaskController {

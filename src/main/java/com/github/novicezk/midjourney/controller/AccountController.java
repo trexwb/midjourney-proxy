@@ -16,6 +16,7 @@ import java.util.List;
 
 @Api(tags = "账号查询")
 @RestController
+@CrossOrigin(origins = "*") // 允许所有源
 @RequestMapping("/account")
 @RequiredArgsConstructor
 public class AccountController {

@@ -46,6 +46,7 @@ import java.util.regex.Pattern;
 
 @Api(tags = "任务提交")
 @RestController
+@CrossOrigin(origins = "*") // 允许所有源
 @RequestMapping("/submit")
 @RequiredArgsConstructor
 public class SubmitController {
