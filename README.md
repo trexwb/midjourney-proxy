@@ -1,3 +1,8 @@
+# 打包说明：
+mvn clean package
+mv target/midjourney-proxy-*.jar ./app.jar
+rm -rf target
+
 <div align="center">
 
 <h1 align="center">midjourney-proxy</h1>
