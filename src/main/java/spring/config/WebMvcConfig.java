@@ -17,6 +17,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Resource
 	private ProxyProperties properties;
 
+  @Override
+  public void addCorsMappings(CorsRegistry registry) {
+    registry.addMapping("/**")
+          .allowedOrigins("*")
+          .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+          .allowedHeaders("*")
+          .allowCredentials(true);
+  }
+
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("redirect:doc.html");
